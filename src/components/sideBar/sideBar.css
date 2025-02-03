@@ -1,0 +1,60 @@
+:root{
+  --sidebar-height: 200px;
+  --sidebar-width: 130px;
+}
+
+.side-bar{
+  height: var(--sidebar-height);
+  width: var(--sidebar-width);
+  position: fixed;
+  top: calc(50% - calc(var(--sidebar-height)/2));
+  left: 20px;
+  border-left: solid 2px white;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  z-index: 1000;
+  padding-bottom: 5px;
+}
+
+button.link{
+  padding-left: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 20px;
+  background: none;
+  color: white;
+  border: none;
+  font-weight: 300;
+  transition: all .1s ease-in-out;
+}
+
+button.link.active{
+  position: relative;
+  font-weight: 400;
+}
+
+button.link.active::after {
+  content: '';
+  opacity: 1;
+  animation: underlineAnim 2s;
+  transition: opacity .3s ease-in;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  top: 1.2em;
+  left: 0;
+}
+
+@keyframes underlineAnim {
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}

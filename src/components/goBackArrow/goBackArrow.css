@@ -1,0 +1,15 @@
+.go-back-button{
+  position: absolute;
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+  font-size: 32px;
+  color: white;
+  background: none;
+  border: none;
+  z-index: 9999;
+}
+
+.go-back-button:hover{
+  cursor: pointer;
+}

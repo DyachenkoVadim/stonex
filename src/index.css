@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
+/* Основні змінні */
+
+:root {
+  --font-primary: "Unbounded", sans-serif;
+  --background-color: #000;
+  --text-color: #fff;
+  --header-height: 150px;
+  
+  /* Зірки */
+  --star-size: 2px;
+  --star-glow: rgba(255, 255, 255, 0.7);
+  --star-shadow: 15px;
+
+  /* Комети */
+  --comet-size: 6px;
+  --comet-color: white;
+  --comet-glow: rgba(255, 255, 255, 0.7);
+  --comet-shadow: 15px;
+  --comet-tail-length: 150px;
+  --comet-tail-width: 5px;
+  --comet-tail-gradient: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  --comet-tail-rotation: 0; /* Кут повороту хвоста */
+
+  /* Анімація */
+  --animation-speed-min: 3s;
+  --animation-speed-max: 5s;
+}
+
+#root {
+  height: 100%;
+}
+
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-primary);
+
+}
+
+
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+

@@ -1,0 +1,116 @@
+.scroll-container {
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-container::-webkit-scrollbar{
+  display: none;
+}
+
+.page{
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.parallax-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 400vh;
+  background-image: url('./assets/background.jpg');
+  background-attachment: fixed;
+  background-position: center 0vh;
+  z-index: -1;
+}
+
+.stars,
+.comets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Загальні стилі для зірок і комет */
+.star,
+.comet {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Зірки */
+.star {
+  width: var(--star-size);
+  height: var(--star-size);
+  background-color: var(--text-color);
+  box-shadow: 0 0 var(--star-shadow) 4px var(--star-glow);
+}
+
+/* Комети */
+.comet {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle, white, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  filter: blur(3px); /* Розмиття для основи */
+  transform-origin: center;
+  box-shadow: 0 0 20px 7px rgba(255, 255, 255, 0.7);
+}
+
+.comet::before {
+  content: "";
+  position: absolute;
+  width: 150px; /* Довжина хвоста */
+  height: 15px; /* Ширина хвоста */
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  filter: blur(10px); /* Розмиття для створення ефекту руху */
+  left: -142.5px;
+  transform: rotate(var(--comet-tail-rotation, 0deg));
+  transform-origin: 100% 50%; /* Вісь обертання */
+}
+
+/* Анімація для зірок та комет */
+@keyframes randomMove {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--move-x), var(--move-y));
+    opacity: 0.5; /* Затухання */
+  }
+}
+
+@keyframes starAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes cometAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
