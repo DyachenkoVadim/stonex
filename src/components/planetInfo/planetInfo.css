@@ -51,6 +51,23 @@
   justify-content: space-around;
 }
 
+.planet-item{
+  width: 200px;
+  height: 200px;
+  border: solid 1px silver ;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planet-items-container{
+  width: 100%;
+  padding: 0 60px;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+
 @keyframes slideAnim {
   0%{
     translate: 50vw;
