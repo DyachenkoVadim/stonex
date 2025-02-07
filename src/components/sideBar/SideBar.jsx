@@ -3,7 +3,7 @@ import "./sideBar.css";
 
 function SideBar({ onNavigate }) {
   return (
-    <div className="side-bar">
+    <div className="side-bar fixed flex flex-col gap-6 z-1000 pb-1 border-l-2 left-4">
       <button
         className="link active"
         data-section="home"

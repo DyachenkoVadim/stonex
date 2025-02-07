@@ -4,17 +4,7 @@
 }
 
 .side-bar{
-  height: var(--sidebar-height);
-  width: var(--sidebar-width);
-  position: fixed;
   top: calc(50% - calc(var(--sidebar-height)/2));
-  left: 20px;
-  border-left: solid 2px white;
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  z-index: 1000;
-  padding-bottom: 5px;
 }
 
 button.link{
@@ -43,7 +33,7 @@ button.link.active::after {
   width: 100%;
   height: 2px;
   background-color: white;
-  top: 1.2em;
+  top: 1.4em;
   left: 0;
 }
 

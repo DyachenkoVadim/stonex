@@ -121,21 +121,24 @@ function App() {
       <div className="parallax-background"></div>
       <div className="stars"></div>
       <div className="comets"></div>
-      <Header onNavigate={handleNavigation} />
+
       <SideBar onNavigate={handleNavigation} />
-      <div className="scroll-container" ref={scrollContainerRef}>
-        <section id="home" className="page">
-          <Home onNavigate={handleNavigation} />
-        </section>
-        <section id="map" className="page">
-          <Map />
-        </section>
-        <section id="about" className="page">
-          <About />
-        </section>
-        <section id="contacts" className="page">
-          <Contacts />
-        </section>
+      <div className="flex flex-col h-screen">
+        <Header onNavigate={handleNavigation} />
+        <div className="scroll-container h-[80%]" ref={scrollContainerRef}>
+          <section id="home" className="page ">
+            <Home onNavigate={handleNavigation} />
+          </section>
+          <section id="map" className="page">
+            <Map />
+          </section>
+          <section id="about" className="page">
+            <About />
+          </section>
+          <section id="contacts" className="page">
+            <Contacts />
+          </section>
+        </div>
       </div>
     </div>
   );

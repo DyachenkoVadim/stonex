@@ -41,7 +41,7 @@ function Map() {
   };
 
   return (
-    <div className="map-page">
+    <div className="relative size-[100%]">
       {!isZoomed ? (
         <Switch handleSwitchChange={handleSwitchChange} viewMode={viewMode} />
       ) : (
@@ -54,7 +54,7 @@ function Map() {
         </>
       )}
 
-      <Canvas>
+      <Canvas className="my-auto">
         <AutoCamera fov={10} position={cameraPos} />
         <pointLight intensity={200} position={[0, 0, 0]} />
         <ambientLight intensity={0.4} />
